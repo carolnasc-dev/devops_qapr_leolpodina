@@ -1,0 +1,518 @@
+
+/* CONFIGURAÇÕES GERAIS */
+:root {
+    --verde: #103c2e;
+    --verde-claro: #1d694d;
+    --dourado: #d9ad50;
+    --fundo: #f5f5ef;
+    --branco: #ffffff;
+    --texto: #52635b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--verde);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.secao {
+    padding: 90px 8%;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    min-height: 88px;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: var(--branco);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.simbolo {
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    color: var(--verde);
+    background: var(--dourado);
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.logo strong,
+.logo small {
+    display: block;
+}
+
+.logo strong {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.logo small {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--texto);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: var(--verde-claro);
+}
+
+.menu .botao-menu {
+    background: var(--verde);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+/* BANNER PRINCIPAL */
+.hero {
+    min-height: 610px;
+    padding: 100px 8% 55px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 35, 26, 0.97) 0%,
+            rgba(5, 35, 26, 0.85) 48%,
+            rgba(5, 35, 26, 0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-conteudo {
+    max-width: 720px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--dourado);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.etiqueta.escura {
+    color: var(--verde-claro);
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5.5vw, 68px);
+    line-height: 1.12;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--dourado);
+}
+
+.hero-conteudo > p {
+    max-width: 600px;
+    color: #e0e9e3;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 23px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.principal {
+    background: var(--dourado);
+    color: #173a2d;
+}
+
+.principal:hover {
+    background: #edc96f;
+}
+
+.secundario {
+    border: 1px solid #dce7df;
+    color: white;
+}
+
+.secundario:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-destaques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 65px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-destaques div strong,
+.hero-destaques div small {
+    display: block;
+}
+
+.hero-destaques strong {
+    font-size: 14px;
+}
+
+.hero-destaques small {
+    color: #cad8d0;
+    font-size: 12px;
+}
+
+/* SOBRE */
+.sobre {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 70px;
+}
+
+h2 {
+    font-size: clamp(29px, 3.5vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.sobre-texto p {
+    color: var(--texto);
+    margin-bottom: 18px;
+}
+
+.link-verde {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--verde-claro);
+    font-weight: bold;
+}
+
+.sobre-card {
+    padding: 40px;
+    background: var(--verde);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(16, 60, 46, 0.12);
+}
+
+.icone-grande {
+    display: block;
+    color: var(--dourado);
+    font-size: 65px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.sobre-card h3 {
+    font-size: 25px;
+    line-height: 1.35;
+    margin-bottom: 15px;
+}
+
+.sobre-card p {
+    color: #d2e1d8;
+}
+
+/* SERVIÇOS */
+.servicos {
+    background: #eaece4;
+}
+
+.titulo-secao {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.titulo-secao > p {
+    color: var(--texto);
+}
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.servico {
+    padding: 30px 24px;
+    background: white;
+    border-radius: 8px;
+    border-bottom: 3px solid transparent;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.servico:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado);
+}
+
+.icone {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    background: #edf4ee;
+    color: var(--verde-claro);
+    font-size: 29px;
+}
+
+.servico h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.servico p {
+    color: var(--texto);
+    font-size: 14px;
+}
+
+/* SETORES BRASILEIROS */
+.brasil {
+    color: white;
+    background: var(--verde);
+}
+
+.brasil .titulo-secao > p {
+    color: #d1dfd6;
+}
+
+.grade-setores {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.setor {
+    padding: 28px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.setor > span {
+    color: var(--dourado);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.setor h3 {
+    margin: 14px 0 8px;
+    font-size: 20px;
+}
+
+.setor p {
+    color: #d1dfd6;
+    font-size: 14px;
+}
+
+/* CONTATO */
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: start;
+}
+
+.contato-texto p {
+    max-width: 460px;
+    color: var(--texto);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 12px 40px rgba(16, 60, 46, 0.07);
+}
+
+.formulario label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #dce3dc;
+    border-radius: 5px;
+    background: #fcfcfa;
+    color: var(--verde);
+    font: inherit;
+    font-size: 14px;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 1px;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.formulario > small {
+    color: var(--texto);
+    font-size: 11px;
+}
+
+/* RODAPÉ */
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px 8%;
+    color: white;
+    background: #08271e;
+}
+
+.logo-rodape small {
+    color: #c2d3c8;
+}
+
+.rodape > p,
+.rodape > a:last-child {
+    color: #c2d3c8;
+    font-size: 12px;
+}
+
+/* TABLETS E CELULARES */
+@media (max-width: 1050px) {
+    .cabecalho {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .grade-servicos,
+    .grade-setores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sobre {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecalho {
+        padding: 18px 5%;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 12px 18px;
+        font-size: 13px;
+    }
+
+    .menu .botao-menu {
+        padding: 8px 13px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 75px 6% 40px;
+        background-position: center;
+    }
+
+    .hero-conteudo > p {
+        font-size: 15px;
+    }
+
+    .hero-destaques {
+        gap: 20px;
+        margin-top: 45px;
+    }
+
+    .secao {
+        padding: 65px 6%;
+    }
+
+    .sobre,
+    .contato {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .grade-servicos,
+    .grade-setores {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-card,
+    .formulario {
+        padding: 25px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 6%;
+    }
+}
