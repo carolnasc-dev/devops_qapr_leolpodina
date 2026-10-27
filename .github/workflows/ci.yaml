@@ -7,7 +7,7 @@ on:
     branches: [ "homologacao" ]
   workflow_dispatch:
 
-jobs:carolinenascimento
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
