@@ -48,11 +48,11 @@ jobs:
             echo "Acesso liberado"
             
             # fazer o pull da imagem dockerhub
-            sudo docker pull ngaloni/homo_leopoldina:latest
+            sudo docker pull carolinenascimento/homo_leopoldina:latest
 
             # Parar o app atual remover o container
             sudo docker stop homo_leopoldina 2>/dev/null || true
             sudo docker rm homo_leopoldina 2>/dev/null || true
 
             # Publicar novo container
-            sudo docker run --name homo_leopoldina -d -p 80:8080 ngaloni/homo_leopoldina:latest
+            sudo docker run --name homo_leopoldina -d -p 80:80 carolinenascimento/homo_leopoldina:latest
